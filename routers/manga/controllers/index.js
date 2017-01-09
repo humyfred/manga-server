@@ -1,5 +1,5 @@
 
 
-export.getUser => (ctx){
+exports.getUser = (ctx) => {
   ctx.body = '111';
 }

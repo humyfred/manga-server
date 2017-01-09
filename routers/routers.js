@@ -10,9 +10,9 @@ var me     = require('./me');
 
 routers.redirect('/login', 'sign-in');
 
-routers.use('/mangas',manga);
-routers.use('/posts',post);
-routers.use('/me',me);
+routers.use('/mangas',manga.routes);
+routers.use('/posts',post.routes);
+routers.use('/me',me.routes);
 
 
 exports.routers

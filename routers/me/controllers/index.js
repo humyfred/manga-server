@@ -1,5 +1,5 @@
 
 
-export.me =>(ctx){
+exports.me = (ctx) => {
   ctx.body = '222';
 }

@@ -1,5 +1,5 @@
 
 
-exports.getPost =>(ctx){
+exports.getPost = (ctx) => {
   ctx.body = '333';
 }
