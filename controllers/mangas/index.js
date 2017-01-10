@@ -5,15 +5,19 @@ exports.getUser = (ctx) => {
 }
 
 exports.getCartoon = (ctx) => {
+   ctx.compress = true;
    ctx.type = 'application/json; charset=utf-8';
-   ctx.body = {
-     id: 0,
+   ctx.body = Object.assign({id: 0,
      imgSrc: 'http://pic01.ishuhui.com/cartoon/book/thumb/58/DCeAGPK50KVJN7OazdCwlRz.jpg',
      chapter: '阿里巴巴的选择',
      resource: 'http://www.ishuhui.com/post/375940',
      title: '魔笛'
-    };
-}
+    },{imgs:['//pic04.ishuhui.com/cartoon/book-1/1/851-8152/00.png?87302690',
+   '//pic04.ishuhui.com/cartoon/book-1/1/851-8152/03.png?87302690',
+   '//pic04.ishuhui.com/cartoon/book-1/1/851-8152/04.png?87302690',
+   '//pic04.ishuhui.com/cartoon/book-1/1/851-8152/05.png?87302690',
+   '//pic04.ishuhui.com/cartoon/book-1/1/851-8152/06.png?87302690']});
+};
 
 
 exports.getCartoonList = (ctx) => {

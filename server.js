@@ -1,6 +1,5 @@
 const Koa = require('koa');
 const app = new Koa();
-const convert = require('koa-convert');
 const init = require('./server-init');
 
 init(app);
