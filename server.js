@@ -7,7 +7,8 @@ app.use(convert (function  *(next){
   const start = new Date();
   yield next;
   const end = new Date();
-  console.log('`${this.method} ${this.url}`:'+end-start);
+  const ms  = end -start;
+  console.log(`${this.method} ${this.url} ${ms}ms`);
 }));
 
 app.use(routers.routes());
@@ -18,4 +19,6 @@ app.use(ctx => {
   ctx.body = 'Hello Koa';
 });
 
-if (!module.parent) app.listen(3000);
+if (!module.parent) app.listen(3000, () =>{
+  console.log('server start listen on 3000');
+});
