@@ -3,12 +3,13 @@ const routers = require('./routers/routers');
 const passport = require('koa-passport');
 const compress = require('koa-compress');
 const logger = require('koa-logger');
+const cors = require('koa-cors');
 
 
 
 module.exports = init = (app) =>{
   app.proxy = true ;
-
+  app.use(cors({'origin':'http://localhost:9999'}));
   app.use(logger());
   app.use(bodyParser());
   app.use(passport.initialize());
