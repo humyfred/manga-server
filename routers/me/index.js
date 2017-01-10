@@ -2,8 +2,8 @@ var Router  = require('koa-router');
 var routers = new Router();
 
 
-var controllers = require('./controllers');
+var controllers = require('../../controllers/me');
 routers.get('/:me',controllers.me);
 
 
-exports.routers;
+module.exports = routers;
