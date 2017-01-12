@@ -114,23 +114,45 @@ let data = [{
 
 exports.getPost = (ctx) => {
   ctx.body = {
-  id:10,
-  bannerUrl:'http://pic.qiantucdn.com/58pic/18/13/67/72w58PICshJ_1024.jpg',
-  author:{avator:'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1740907959,1531109126&fm=23&gp=0.jpg',name:'小熊'},
-  imgs:['//pic04.ishuhui.com/cartoon/book-1/1/851-8152/00.png?87302690',
+      id:10,
+      bannerUrl:'http://pic.qiantucdn.com/58pic/18/13/67/72w58PICshJ_1024.jpg',
+      author:{avator:'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1740907959,1531109126&fm=23&gp=0.jpg',name:'小熊'},
+      imgs:['//pic04.ishuhui.com/cartoon/book-1/1/851-8152/00.png?87302690',
             '//pic04.ishuhui.com/cartoon/book-1/1/851-8152/03.png?87302690',
             '//pic04.ishuhui.com/cartoon/book-1/1/851-8152/04.png?87302690',
             '//pic04.ishuhui.com/cartoon/book-1/1/851-8152/05.png?87302690',
             '//pic04.ishuhui.com/cartoon/book-1/1/851-8152/06.png?87302690'],
-  time:'2017-01-10',
-  summary:'hahahaha',
-  pictures:['https://imgsa.baidu.com/forum/whfpf%3D106%2C106%2C40%3Bq%3D100%3Bg%3D0/sign=cb8e09f2d800baa1ba7914fb212d8822/c52bb6003af33a87bde3c404cf5c10385343b530.jpg','https://imgsa.baidu.com/forum/whfpf%3D106%2C106%2C40%3Bq%3D100%3Bg%3D0/sign=ad6f202eb3a1cd1105e32160df2ff9cc/a6123af33a87e9506099377219385343fbf2b430.jpg','https://imgsa.baidu.com/forum/whfpf%3D106%2C106%2C40%3Bq%3D100%3Bg%3D0/sign=19f289213012b31bc7399e69e025074a/db0149540923dd543c31b20ed809b3de9c824823.jpg','https://imgsa.baidu.com/forum/whfpf%3D106%2C106%2C40%3Bq%3D100%3Bg%3D0/sign=c3fdd47262600c33f02c8d887c71603f/bb0a972bd40735fa4e5359df97510fb30e2408c2.jpg'],
-  title:'你好吗三个字',
-  reply:44,
-  views:23112
-};
+            time:'2017-01-10',
+            summary:'hahahaha',
+            pictures:['https://imgsa.baidu.com/forum/whfpf%3D106%2C106%2C40%3Bq%3D100%3Bg%3D0/sign=cb8e09f2d800baa1ba7914fb212d8822/c52bb6003af33a87bde3c404cf5c10385343b530.jpg','https://imgsa.baidu.com/forum/whfpf%3D106%2C106%2C40%3Bq%3D100%3Bg%3D0/sign=ad6f202eb3a1cd1105e32160df2ff9cc/a6123af33a87e9506099377219385343fbf2b430.jpg','https://imgsa.baidu.com/forum/whfpf%3D106%2C106%2C40%3Bq%3D100%3Bg%3D0/sign=19f289213012b31bc7399e69e025074a/db0149540923dd543c31b20ed809b3de9c824823.jpg','https://imgsa.baidu.com/forum/whfpf%3D106%2C106%2C40%3Bq%3D100%3Bg%3D0/sign=c3fdd47262600c33f02c8d887c71603f/bb0a972bd40735fa4e5359df97510fb30e2408c2.jpg'],
+            title:'你好吗三个字',
+            reply:44,
+            views:23112
+          };
 }
 
 exports.getPostList = () => {
   ctx.body = data;
+}
+
+exports.likePost = (ctx) => {
+  console.log('request params:'+ctx.params);
+  ctx.body = {
+      id:10,
+      bannerUrl:'http://pic.qiantucdn.com/58pic/18/13/67/72w58PICshJ_1024.jpg',
+      author:{avator:'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1740907959,1531109126&fm=23&gp=0.jpg',name:'小熊'},
+      imgs:['//pic04.ishuhui.com/cartoon/book-1/1/851-8152/00.png?87302690',
+            '//pic04.ishuhui.com/cartoon/book-1/1/851-8152/03.png?87302690',
+            '//pic04.ishuhui.com/cartoon/book-1/1/851-8152/04.png?87302690',
+            '//pic04.ishuhui.com/cartoon/book-1/1/851-8152/05.png?87302690',
+            '//pic04.ishuhui.com/cartoon/book-1/1/851-8152/06.png?87302690'],
+            time:'2017-01-10',
+            summary:'hahahaha',
+            pictures:['https://imgsa.baidu.com/forum/whfpf%3D106%2C106%2C40%3Bq%3D100%3Bg%3D0/sign=cb8e09f2d800baa1ba7914fb212d8822/c52bb6003af33a87bde3c404cf5c10385343b530.jpg','https://imgsa.baidu.com/forum/whfpf%3D106%2C106%2C40%3Bq%3D100%3Bg%3D0/sign=ad6f202eb3a1cd1105e32160df2ff9cc/a6123af33a87e9506099377219385343fbf2b430.jpg','https://imgsa.baidu.com/forum/whfpf%3D106%2C106%2C40%3Bq%3D100%3Bg%3D0/sign=19f289213012b31bc7399e69e025074a/db0149540923dd543c31b20ed809b3de9c824823.jpg','https://imgsa.baidu.com/forum/whfpf%3D106%2C106%2C40%3Bq%3D100%3Bg%3D0/sign=c3fdd47262600c33f02c8d887c71603f/bb0a972bd40735fa4e5359df97510fb30e2408c2.jpg'],
+            title:'你好吗三个字',
+            reply:44,
+            isLike:true,
+            like:88,
+            views:23112
+          };
 }
