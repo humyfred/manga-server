@@ -9,7 +9,7 @@ const convert = require('koa-convert');
 
 module.exports = init = (app) =>{
   app.proxy = true ;
-  app.use(convert(cors({'origin':'http://localhost:9999'})));
+  app.use(convert(cors({'origin':'*'})));
   app.use(convert(logger()));
   app.use(bodyParser());
   app.use(convert(passport.initialize()));
