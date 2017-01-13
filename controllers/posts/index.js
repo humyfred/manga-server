@@ -219,4 +219,7 @@ exports.likePost = (ctx) => {
     data[ctx.params.post].like --;
   }
   ctx.body =data[ctx.params.post];
+  const err = new Error('The message');
+  throw  err;
+
 }

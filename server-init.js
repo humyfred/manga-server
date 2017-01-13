@@ -7,9 +7,30 @@ const cors = require('koa-cors');
 const convert = require('koa-convert');
 
 
+const catchException = () => {
+  return convert(function *(next){
+    try{
+      yield next;
+    }catch(e){
+      console.log('出错了：'+JSON.stringify(e));
+    }
+  })
+}
+
+process.on('uncaughtException',function(err){
+  console.log(err);
+});
+
+process.on('unhandledRejection',function(err){
+  console.log(err);
+});
+
+
 module.exports = init = (app) =>{
   app.proxy = true ;
+  app.use(catchException());
   app.use(convert(cors({'origin':'*'})));
+
   app.use(convert(logger()));
   app.use(bodyParser());
   app.use(convert(passport.initialize()));
