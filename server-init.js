@@ -5,7 +5,8 @@ const compress = require('koa-compress');
 const logger = require('koa-logger');
 const cors = require('koa-cors');
 const convert = require('koa-convert');
-
+const cluster = require('cluster');
+const domain_server = require('./domain-server');
 
 const catchException = () => {
   return convert(function *(next){
@@ -17,9 +18,7 @@ const catchException = () => {
   })
 }
 
-process.on('uncaughtException',function(err){
-  console.log(err);
-});
+
 
 process.on('unhandledRejection',function(err){
   console.log(err);
@@ -28,7 +27,8 @@ process.on('unhandledRejection',function(err){
 
 module.exports = init = (app) =>{
   app.proxy = true ;
-  app.use(catchException());
+  domain_server(app);
+  //app.use(catchException());
   app.use(convert(cors({'origin':'*'})));
 
   app.use(convert(logger()));
@@ -45,4 +45,41 @@ module.exports = init = (app) =>{
     flush: require('zlib').Z_SYNC_FLUSH
   })));
 
+
+  process.on('uncaughtException ',function(err){
+    console.log('error catch by process', err.stack);
+    try {
+          var killTimer = setTimeout(function () {
+              process.exit(1);
+          }, 30000);
+          killTimer.unref();
+
+          app.close();
+
+          if (cluster.worker) {
+              cluster.worker.disconnect();
+          }
+      } catch (e) {
+          console.log('error when exit', e.stack);
+      }
+  });
+
 };
+
+//发送消息的使用方式
+// var udpLog = dgram.createSocket('udp4');
+// var cluster = require('cluster');
+//
+// process.on('uncaughtException', function (err) {
+//     udpLog.send('process ' + process.pid + ' down', /* ...
+// 一些发送 udp 消息的参数 ...*/, function () {
+//         cluster.worker.disconnect();
+//     });
+//
+//     server.close();
+//
+//     // 保证 worker.disconnect 不会拖太久..
+//     setTimeout(function () {
+//         cluster.worker.disconnect();
+//     }, 100).unref();
+// });

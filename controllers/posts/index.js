@@ -240,6 +240,7 @@ exports.getPostList = () => {
 }
 
 exports.likePost = (ctx) => {
+  console.log('like post',ctx.params.post)
   data[ctx.params.post].isLike = !data[ctx.params.post].isLike;
   if(data[ctx.params.post].isLike){
     data[ctx.params.post].like ++;
