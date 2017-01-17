@@ -6,29 +6,23 @@ const logger = require('koa-logger');
 const cors = require('koa-cors');
 const convert = require('koa-convert');
 const cluster = require('cluster');
-const domain_server = require('./domain-server');
-
-const catchException = () => {
-  return convert(function *(next){
-    try{
-      yield next;
-    }catch(e){
-      console.log('出错了：'+JSON.stringify(e));
-    }
-  })
-}
+const error_handler = require('./error-handler');
 
 
+process.on('unhandledRejection', (reason, p) => {
+  console.log('Unhandled Rejection at: Promise', p, 'reason:', reason);
+  // application specific logging, throwing an error, or other logic here
+});
 
-process.on('unhandledRejection',function(err){
-  console.log(err);
+process.on('rejectionHandled', (p) => {
+  console.log('here is rejection :',p);
 });
 
 
 module.exports = init = (app) =>{
   app.proxy = true ;
-  domain_server(app);
-  //app.use(catchException());
+  //domain_server(app);
+  app.use(convert(error_handler()));
   app.use(convert(cors({'origin':'*'})));
 
   app.use(convert(logger()));
@@ -60,7 +54,7 @@ module.exports = init = (app) =>{
               cluster.worker.disconnect();
           }
       } catch (e) {
-          console.log('error when exit', e.stack);
+          console.log('process trigger error when exit', e.stack);
       }
   });
 

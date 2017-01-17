@@ -6,8 +6,8 @@ module.exports = ( ) =>{
     try{
       yield next;
     }catch(err){
-      this.status = err.status || 403;
-      this.body = err.message;
+      this.status = err.status || 500;
+      this.body = err.message || '服务器内部错误，请稍等';
       console.log('error catch by middleware',err);
 
 

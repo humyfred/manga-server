@@ -6,7 +6,8 @@ const cluster = require('cluster');
 init(app);
 
 app.on('error', function(err, ctx){
-  log.error('error catch by koa', err, ctx);
+  console.error('error catch by koa', err, ctx);
+  //throw new Error('haha');
 });
 
 if (cluster.isMaster) {
