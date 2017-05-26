@@ -1,59 +1,59 @@
 
 let datas = [{
   id: 0,
-  imgSrc: 'http://pic01.ishuhui.com/cartoon/book/thumb/58/DCeAGPK50KVJN7OazdCwlRz.jpg',
+  imgSrc: 'http://pic01.ishuhui.com/cartoon/book/thumb/53/vgkFNdC9ZP9hOfc_3myASrG.jpg',
   chapter: '阿里巴巴的选择',
   resource: 'http://www.ishuhui.com/post/375940',
   title: '魔笛',
-  imgs:['//pic01.ishuhui.com/cartoon/book-7/58/333-8223/0001.jpg?9b455098',
- '//pic01.ishuhui.com/cartoon/book-7/58/333-8223/0002.jpg?9b455098',
- '//pic01.ishuhui.com/cartoon/book-7/58/333-8223/0003.jpg?9b455098',
- '//pic01.ishuhui.com/cartoon/book-7/58/333-8223/0004.jpg?9b455098',
- '//pic01.ishuhui.com/cartoon/book-7/58/333-8223/0005.jpg?9b455098']
+  imgs:['http://pic04.ishuhui.com/cartoon/book-1/3/255-8884/00.png?7a571593',
+ 'http://pic04.ishuhui.com/cartoon/book-1/3/255-8884/01.png?7a571593',
+ 'http://pic04.ishuhui.com/cartoon/book-1/3/255-8884/02.png?7a571593',
+ 'http://pic04.ishuhui.com/cartoon/book-1/3/255-8884/03.png?7a571593',
+ 'http://pic04.ishuhui.com/cartoon/book-1/3/255-8884/04.png?7a571593']
  }, {
   id: 1,
   imgSrc: 'http://pic01.ishuhui.com/cartoon/book/thumb/3/rP2thPkxTa6Eph1qp9sS5B3J.jpg',
   chapter: '調整·2',
   resource: 'http://www.ishuhui.com/post/375935',
   title: '铂金终局 第7话',
-  imgs:['//pic04.ishuhui.com/cartoon/book-1/1/851-8152/00.png?87302690',
- '//pic04.ishuhui.com/cartoon/book-1/1/851-8152/03.png?87302690',
- '//pic04.ishuhui.com/cartoon/book-1/1/851-8152/04.png?87302690',
- '//pic04.ishuhui.com/cartoon/book-1/1/851-8152/05.png?87302690',
- '//pic04.ishuhui.com/cartoon/book-1/1/851-8152/06.png?87302690']
+  imgs:['http://pic04.ishuhui.com/cartoon/book-1/3/255-8884/00.png?7a571593',
+ 'http://pic04.ishuhui.com/cartoon/book-1/3/255-8884/01.png?7a571593',
+ 'http://pic04.ishuhui.com/cartoon/book-1/3/255-8884/02.png?7a571593',
+ 'http://pic04.ishuhui.com/cartoon/book-1/3/255-8884/03.png?7a571593',
+ 'http://pic04.ishuhui.com/cartoon/book-1/3/255-8884/04.png?7a571593']
  }, {
   id: 2,
   imgSrc: 'http://pic01.ishuhui.com/cartoon/book/thumb/2/zsrxrmqJOE3Lh9prn7gDp5Zn.jpg',
   chapter: '圓木頭既能做武器又能做住宅 還能當成交通工具 方便得很',
   resource: 'http://www.ishuhui.com/post/375940',
   title: '鸭子的天空 第515话 ',
-  imgs:['//pic04.ishuhui.com/cartoon/book-1/10/921-8146/00.png?70273790',
- '//pic04.ishuhui.com/cartoon/book-1/10/921-8146/01.png?70273790',
- '//pic04.ishuhui.com/cartoon/book-1/10/921-8146/02.png?70273790',
- '//pic04.ishuhui.com/cartoon/book-1/10/921-8146/03.png?70273790',
- '//pic04.ishuhui.com/cartoon/book-1/10/921-8146/04.png?70273790']
+  imgs:['http://pic04.ishuhui.com/cartoon/book-1/3/255-8884/00.png?7a571593',
+ 'http://pic04.ishuhui.com/cartoon/book-1/3/255-8884/01.png?7a571593',
+ 'http://pic04.ishuhui.com/cartoon/book-1/3/255-8884/02.png?7a571593',
+ 'http://pic04.ishuhui.com/cartoon/book-1/3/255-8884/03.png?7a571593',
+ 'http://pic04.ishuhui.com/cartoon/book-1/3/255-8884/04.png?7a571593']
  }, {
   id: 3,
   imgSrc: 'http://pic01.ishuhui.com/cartoon/book/thumb/1/YDdFCpDpUAveOWJvxJRusmHb.jpg',
  chapter: '煙頭',
  resource: 'http://www.ishuhui.com/post/375945',
  title: '草帽少年 第825话 ',
- imgs:['//pic04.ishuhui.com/cartoon/book-1/1/851-8152/00.png?87302690',
-'//pic04.ishuhui.com/cartoon/book-1/1/851-8152/03.png?87302690',
-'//pic04.ishuhui.com/cartoon/book-1/1/851-8152/04.png?87302690',
-'//pic04.ishuhui.com/cartoon/book-1/1/851-8152/05.png?87302690',
-'//pic04.ishuhui.com/cartoon/book-1/1/851-8152/06.png?87302690']
+ imgs:['http://pic04.ishuhui.com/cartoon/book-1/3/255-8884/00.png?7a571593',
+ 'http://pic04.ishuhui.com/cartoon/book-1/3/255-8884/01.png?7a571593',
+ 'http://pic04.ishuhui.com/cartoon/book-1/3/255-8884/02.png?7a571593',
+ 'http://pic04.ishuhui.com/cartoon/book-1/3/255-8884/03.png?7a571593',
+ 'http://pic04.ishuhui.com/cartoon/book-1/3/255-8884/04.png?7a571593']
  }, {
  id: 4,
  imgSrc: 'http://pic01.ishuhui.com/cartoon/book/thumb/58/DCeAGPK50KVJN7OazdCwlRz.jpg',
  chapter: '阿里巴巴的选择',
  resource: 'http://www.ishuhui.com/post/375940',
  title: '鸭子的天空 第515话 ',
- imgs:['//pic04.ishuhui.com/cartoon/book-1/1/851-8152/00.png?87302690',
-'//pic04.ishuhui.com/cartoon/book-1/1/851-8152/03.png?87302690',
-'//pic04.ishuhui.com/cartoon/book-1/1/851-8152/04.png?87302690',
-'//pic04.ishuhui.com/cartoon/book-1/1/851-8152/05.png?87302690',
-'//pic04.ishuhui.com/cartoon/book-1/1/851-8152/06.png?87302690']
+ imgs:['http://pic04.ishuhui.com/cartoon/book-1/3/255-8884/00.png?7a571593',
+ 'http://pic04.ishuhui.com/cartoon/book-1/3/255-8884/01.png?7a571593',
+ 'http://pic04.ishuhui.com/cartoon/book-1/3/255-8884/02.png?7a571593',
+ 'http://pic04.ishuhui.com/cartoon/book-1/3/255-8884/03.png?7a571593',
+ 'http://pic04.ishuhui.com/cartoon/book-1/3/255-8884/04.png?7a571593']
  }];
 
 
